@@ -16,11 +16,11 @@ class MyLineReg:
     
     def log(self, loss, metric, verbose):
         if verbose and i % verbose == 0:
-                print(f'{i} | loss: {loss:.2f}', end='')
-                if self.metric:
-                    print(f' | {self.metric}: {self.metric_value:.2f}')
-                else:
-                    print()
+            print(f'{i} | loss: {loss:.2f}', end='')
+            if self.metric:
+                print(f' | {self.metric}: {self.metric_value:.2f}')
+            else:
+                print()
 
     
     def _calc_metric(self, y_true, y_pred):
@@ -114,3 +114,4 @@ class MyLineReg:
     
     def get_best_score(self):
         return self.metric_value
+
